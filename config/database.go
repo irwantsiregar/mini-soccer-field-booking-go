@@ -1,4 +1,15 @@
-func InitDatabase(*gorm.DB, error) {
+package config
+
+import (
+	"fmt"
+	"net/url"
+	"time"
+
+	"gorm.io/driver/postgres"
+	"gorm.io/gorm"
+)
+
+func InitDatabase()(*gorm.DB, error) {
 	// Initialize your database connection here
 	config := Config
 

@@ -37,6 +37,7 @@ func (u *UserService) GetUserLogin(ctx context.Context) (*dto.UserResponse, erro
 		Username: userLogin.Username,
 		PhoneNumber: userLogin.PhoneNumber,
 		Email: userLogin.Email,
+		Role: userLogin.Role,
 	}
 
 	return &data, nil

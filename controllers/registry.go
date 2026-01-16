@@ -9,11 +9,11 @@ type Registry struct {
 	service services.IServiceRegistry
 }
 
-type IUserControllerRegistry interface {
+type IControllerRegistry interface {
 	GetUserController() controllers.IUserController
 }
 
-func NewControllerRegistry(service services.IServiceRegistry) IUserControllerRegistry {
+func NewControllerRegistry(service services.IServiceRegistry) IControllerRegistry {
 	return &Registry{
 		service: service,
 	}
